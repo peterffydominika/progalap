@@ -1,0 +1,36 @@
+<title>Sör vásárlás</title>
+<meta charset="utf-8">
+<script>
+    szam1 = prompt("Hány éves vagy?")
+
+    if( szam1 > 18 ){
+        alert("Ha van elég pénzed, van sör!")
+    }
+    
+    else if( szam1 == 18){
+        alert("Ha van elég pénzed,éppen van sör!")
+    }
+
+   else{
+    alert("Ha van elég pénzed, akkor sincs sör!!!")
+   } 
+
+   penz = parseInt(prompt("Mennyi pénzed van?")) 
+
+        if(penz > 400){
+            alert("Kapsz sört!")
+                db = penz/400
+                alert(db)
+        }
+
+        else if( penz == 400){
+            alert("Sört még kapsz, de már mást nem tudsz venni.")
+        }
+    
+    else{
+        alert("Nincs elég pénzed, így nem kapsz sört! Viszlát!")
+    }
+
+
+
+</script>
