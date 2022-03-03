@@ -1,36 +1,103 @@
-<title>Sör vásárlás</title>
-<meta charset="utf-8">
-<script>
-    szam1 = prompt("Hány éves vagy?")
-
-    if( szam1 > 18 ){
-        alert("Ha van elég pénzed, van sör!")
-    }
-    
-    else if( szam1 == 18){
-        alert("Ha van elég pénzed,éppen van sör!")
-    }
-
-   else{
-    alert("Ha van elég pénzed, akkor sincs sör!!!")
-   } 
-
-   penz = parseInt(prompt("Mennyi pénzed van?")) 
-
-        if(penz > 400){
-            alert("Kapsz sört!")
-                db = penz/400
-                alert(db)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sörvásárlás</title>
+    <style>
+        body {
+          margin: 0;
+          font-family: 'Playfair Display', serif;
         }
-
-        else if( penz == 400){
-            alert("Sört még kapsz, de már mást nem tudsz venni.")
+        
+        .sidebar {
+          margin: 0;
+          padding: 0;
+          width: 200px;
+          background-color: #f1f1f1;
+          position: fixed;
+          height: 100%;
+          overflow: auto;
+        }
+        
+        .sidebar a {
+          display: block;
+          color: black;
+          padding: 16px;
+          text-decoration: none;
+        }
+         
+        .sidebar a.active {
+          background-color: rgb(62, 224, 157);
+          color: rgb(66, 38, 38);
+        }
+        
+        .sidebar a:hover:not(.active) {
+          background-color:rgb(0, 0, 0);
+          color: white;
+        }
+        
+        div.content {
+          margin-left: 200px;
+          padding: 1px 16px;
+          height: 1000px;
+        }
+        
+        @media screen and (max-width: 700px) {
+          .sidebar {
+            width: 100%;
+            height: auto;
+            position: relative;
+          }
+          .sidebar a {float: left;}
+          div.content {margin-left: 0;}
+        }
+        
+        @media screen and (max-width: 400px) {
+          .sidebar a {
+            text-align: center;
+            float: none;
+          }
+        }
+        </style>
+</head>
+<body>
+    <script>
+        szam1 = prompt("Hány éves vagy?")
+    
+        if( szam1 > 18 ){
+            alert("Ha van elég pénzed, van sör!")
+        }
+        
+        else if( szam1 == 18){
+            alert("Ha van elég pénzed,éppen van sör!")
         }
     
-    else{
-        alert("Nincs elég pénzed, így nem kapsz sört! Viszlát!")
-    }
-
-
-
-</script>
+       else{
+        alert("Ha van elég pénzed, akkor sincs sör!!!")
+       } 
+    
+       penz = parseInt(prompt("Mennyi pénzed van?")) 
+    
+            if(penz > 400){
+                alert("Kapsz sört!")
+                    db = penz/400
+                    alert(db)
+            }
+    
+            else if( penz == 400){
+                alert("Sört még kapsz, de már mást nem tudsz venni.")
+            }
+        
+        else{
+            alert("Nincs elég pénzed, így nem kapsz sört! Viszlát!")
+        }
+    </script>
+     <div class="sidebar">
+        <a class="active" href=" https://peterffydominika.github.io/progalap/">Sörvásárló</a>
+        <a href="https://peterffydominika.github.io/progalap/lovak.html">Lovak</a>
+        <a href="https://peterffydominika.github.io/progalap/harmadikscript.html">Kiscsirke</a>
+      </div>
+</body>
+</html>
