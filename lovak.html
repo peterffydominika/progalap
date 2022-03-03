@@ -1,5 +1,70 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sörvásárlás</title>
+    <style>
+        body {
+          margin: 0;
+          font-family: 'Playfair Display', serif;
+        }
+        img{
+            user-drag:none; -webkit-user-drag:none;
+        }
+        
+        .sidebar {
+          margin: 0;
+          padding: 0;
+          width: 200px;
+          background-color: #f1f1f1;
+          position: fixed;
+          height: 100%;
+          overflow: auto;
+        }
+        
+        .sidebar a {
+          display: block;
+          color: black;
+          padding: 16px;
+          text-decoration: none;
+        }
+         
+        .sidebar a.active {
+          background-color: rgb(62, 224, 157);
+          color: rgb(66, 38, 38);
+        }
+        
+        .sidebar a:hover:not(.active) {
+          background-color:rgb(0, 0, 0);
+          color: white;
+        }
+        
+        div.content {
+          margin-left: 200px;
+          padding: 1px 16px;
+          height: 1000px;
+        }
+        
+        @media screen and (max-width: 700px) {
+          .sidebar {
+            width: 100%;
+            height: auto;
+            position: relative;
+          }
+          .sidebar a {float: left;}
+          div.content {margin-left: 0;}
+        }
+        
+        @media screen and (max-width: 400px) {
+          .sidebar a {
+            text-align: center;
+            float: none;
+          }
+        }
+        </style>
+</head>
 <style>
-    img{user-drag:none; -webkit-user-drag:none;}
+    
 </style>
 
 <body>
